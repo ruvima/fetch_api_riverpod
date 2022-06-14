@@ -15,6 +15,7 @@ class GetDataFromApi extends ChangeNotifier {
 
   Future getData() async {
     listDataModel = [];
+    print(listDataModel.length);
     try {
       http.Response response = await http.get(
         Uri.parse('https://jsonplaceholder.typicode.com/posts'),
@@ -25,6 +26,7 @@ class GetDataFromApi extends ChangeNotifier {
         // print(data[i]['id']);
         listDataModel.add(DataModel.fromMap(data[i]));
       }
+      print(listDataModel.length);
     } catch (e) {
       print(e.toString());
     }

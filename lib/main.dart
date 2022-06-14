@@ -9,7 +9,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Material App',
-      home: const HomeView(),
+      home: HomeView(),
       theme: ThemeData(primarySwatch: Colors.indigo),
     );
   }
